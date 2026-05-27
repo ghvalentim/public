@@ -1,0 +1,84 @@
+<section class="marcacoes-section">
+    <style>
+        .marcacoes-section h2 { font-family: var(--font-title); text-align: center; margin-bottom: 1rem; color: var(--accent-color); }
+        .subtitulo-marcacoes { text-align: center; color: #777; margin-bottom: 3rem; font-weight: 300; }
+        
+        .grid-servicos { display: grid; grid-template-columns: 1fr; gap: 2.5rem; max-width: 900px; margin: 0 auto; }
+        .card-servico { background: #fff; border: 1px solid #eae5da; padding: 2.5rem; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.01); }
+        .card-servico h3 { font-family: var(--font-title); color: var(--text-color); margin-bottom: 1rem; font-size: 1.4rem; border-bottom: 1px solid #eae5da; padding-bottom: 0.5rem; }
+        
+        .info-requisitos { margin-bottom: 1.5rem; }
+        .info-requisitos h4 { font-size: 0.9rem; font-family: var(--font-title); color: var(--accent-color); letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+        .info-requisitos ul { padding-left: 1.2rem; color: #555; font-size: 0.95rem; }
+        .info-requisitos li { margin-bottom: 0.4rem; }
+        
+        .taxa-box { background: #fdfbf7; border: 1px dashed var(--accent-color); padding: 1rem; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+        .taxa-box strong { color: var(--text-color); font-family: var(--font-title); }
+        
+        .alerta-funeraria { border-left: 4px solid #b93c3c; background: #fff5f5; color: #a12b2b; }
+    </style>
+
+    <h2>Marcações e Sacramentos</h2>
+    <p class="subtitulo-marcacoes">Orientações, documentos necessários, taxas e emolumentos paroquiais.</p>
+
+    <div class="grid-servicos">
+        
+        <div class="card-servico">
+            <h3>Batismo</h3>
+            <div class="info-requisitos">
+                <h4>Exigências específicas:</h4>
+                <ul>
+                    <li>Cédula de nascimento da criança.</li>
+                    <li>Certificado do Curso de Preparação para o Batismo (CPB) dos pais e dos padrinhos.</li>
+                    <li>Os padrinhos devem ser católicos, crismados e ter uma vida condizente com a fé.</li>
+                </ul>
+            </div>
+            <div class="taxa-box">
+                <span>Taxa / Emolumento Diocesano:</span>
+                <strong>Sob Consulta / Oferta Livre</strong>
+            </div>
+        </div>
+
+        <div class="card-servico">
+            <h3>Matrimónio</h3>
+            <div class="info-requisitos">
+                <h4>Exigências específicas:</h4>
+                <ul>
+                    <li>Processo deve ser iniciado com 3 a 6 meses de antecedência na secretaria.</li>
+                    <li>Certificado de frequência do Curso de Preparação para o Matrimónio (CPM / Noivos).</li>
+                    <li><strong>Efeitos Civis:</strong> Requer documentação prévia da Conservatória do Registo Civil.</li>
+                    <li><strong>Apenas Religioso:</strong> Aplicável se já houver casamento civil prévio (apresentar certidão).</li>
+                </ul>
+            </div>
+            <div class="taxa-box">
+                <span>Abertura de Processo e Celebração:</span>
+                <strong>[Valor] €</strong>
+            </div>
+        </div>
+
+        <div class="card-servico">
+            <h3>Intenções de Missa</h3>
+            <div class="info-requisitos">
+                <h4>Exigências específicas:</h4>
+                <ul>
+                    <li>As intenções (sufrágio por falecidos, ação de graças ou saúde) devem ser marcadas na secretaria ou antes das celebrações comunitárias.</li>
+                </ul>
+            </div>
+            <div class="taxa-box">
+                <span>Estipêndio de Missa (Tabela Diocesana):</span>
+                <strong>[Valor] €</strong>
+            </div>
+        </div>
+
+        <div class="card-servico class-funeral">
+            <h3>Exéquias Cristãs (Funerais)</h3>
+            <div class="info-requisitos">
+                <div class="taxa-box alerta-funeraria" style="border: none; display: block; margin-bottom: 1rem;">
+                    <strong>Aviso Importante:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 0.95rem;">Os pormenores práticos e a marcação de horários dos funerais devem ser tratados <strong>diretamente com a Agência Funerária</strong> encarregue do serviço, que fará a devida articulação com o Pároco.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

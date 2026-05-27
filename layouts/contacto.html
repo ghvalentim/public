@@ -1,0 +1,62 @@
+<section class="contacto-section">
+    <h2>Fale Connosco</h2>
+    <p class="subtitulo-seccao">Entre em contacto com a paróquia ou envie as suas intenções e dúvidas.</p>
+
+    <div class="layout-duas-colunas">
+        <!-- Coluna da Esquerda: Identidade e Mapa de Localização -->
+        <div class="info-col">
+            <h3>Igreja Paroquial de Travanca de Lagos</h3>
+            <p style="color: #64748b; font-size: 0.95rem; margin-top: -1rem; margin-bottom: 1.5rem;">Igreja de São Pedro — Oliveira do Hospital</p>
+
+            <!-- Contentor do Mapa (Estilos herdados do CSS global) -->
+            <div class="mapa-container" style="height: 450px; overflow: hidden; border-radius: 6px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.97999549517!2d-7.888190224164045!3d40.38713597144444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2329fc2ba102e3%3A0xfa163932f3e8f6db!2sIgreja%20Paroquial%20de%20Travanca%20de%20Lagos%20%2F%20Igreja%20de%20S%C3%A3o%20Pedro!5e0!3m2!1spt-PT!2spt!4v1779804942233!5m2!1spt-PT!2spt" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita: Formulário e Dados de Contacto Directo -->
+        <div class="info-col">
+            <h3>Enviar Mensagem</h3>
+            
+            <form action="https://formspree.io/f/mwvzweow" method="POST" class="form-contacto">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="name" required placeholder="Ex: Maria Silva">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Endereço de E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Ex: maria@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">A sua Mensagem / Intenção</label>
+                    <textarea id="mensagem" name="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+
+            <!-- Informações adicionais de contacto abaixo do formulário -->
+            <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="info-item" style="margin-bottom: 0;">
+                    <strong>Telefone</strong>
+                    <p style="color: var(--text-dark); font-size: 1rem;">+351 238 000 000 <br><span style="font-size: 0.8rem; color: #64748b;">(Chamada para a rede fixa nacional)</span></p>
+                </div>
+
+                <div class="info-item" style="margin-bottom: 0;">
+                    <strong>E-mail Oficial</strong>
+                    <p style="color: var(--text-dark); font-size: 1rem; font-weight: 500;">conselhoeconomicotl@outlook.pt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
