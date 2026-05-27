@@ -1,6 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contentor = document.getElementById("view-content");
     const links = document.querySelectorAll(".nav-link, .nav-logo");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    const alternarMenu = () => {
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+        
+        // Bloqueia o scroll do fundo da paróquia enquanto o menu está aberto
+        document.body.style.overflow = navLinks.classList.contains("open") ? "hidden" : "";
+    };
+
+    menuToggle.addEventListener("click", alternarMenu);
+
+    // [Ajuste no teu intercetor de cliques de links existente]
+    document.addEventListener("click", (e) => {
+        const alvo = e.target.closest(".nav-link, .nav-logo");
+        if (alvo) {
+            e.preventDefault();
+            const rota = alvo.getAttribute("href");
+            
+            // SE O MENU ESTIVER ABERTO (no telemóvel), FECHA-O antes de mudar de página
+            if (navLinks.classList.contains("open")) {
+                alternarMenu();
+            }
+            
+            history.pushState({ rota }, "", rota);
+            carregarComponente(rota);
+        }
+    });
 
     // Função para carregar o layout PHP
     const carregarLayout = async (rota) => {
