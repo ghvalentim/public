@@ -121,6 +121,28 @@ main h2 {
     color: var(--secondary-color);
 }
 
+/* O Botão Hambúrguer (Escondido no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
 .footer {
     text-align: center;
     padding: 2rem;
@@ -130,6 +152,64 @@ main h2 {
     border-top: 1px solid var(--border-color);
     background: #ffffff;
     color: #64748b;
+}
+
+/* ==========================================================================
+   INTERRUPTOR PARA TELEMÓVEIS E TABLETS (MEDIA QUERY)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o botão no telemóvel */
+    }
+
+    /* Transforma os links numa cortina vertical vinda do topo */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        z-index: 100;
+        
+        /* Animação de entrada (Slide de cima para baixo) */
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.1, 0.76, 0.55, 0.94), opacity 0.3s ease;
+        pointer-events: none; /* Evita cliques acidentais com menu fechado */
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 1.2rem; /* Texto maior para cliques táteis mais fáceis */
+    }
+
+    /* Classe ativada pelo JS quando o menu abre */
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Animação do botão Hambúrguer para se transformar num "X" */
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--accent-color);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--accent-color);
+    }
 }
 
 /* ==========================================================================
