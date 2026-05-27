@@ -149,6 +149,10 @@ main h2 {
     transition: all 0.3s ease-in-out;
 }
 
+.bar {
+    color: var(--primary-color);
+}
+
 .footer {
     text-align: center;
     padding: 2rem;
