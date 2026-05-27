@@ -194,7 +194,7 @@ main h2 {
     .nav-links a {
         margin-left: 0;
         font-size: 1.2rem;
-        color: var(--primary-color); /* Texto maior para cliques táteis mais fáceis */
+        color: var(--text-dark); /* Texto maior para cliques táteis mais fáceis */
     }
 
     /* Classe ativada pelo JS quando o menu abre */
