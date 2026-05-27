@@ -131,7 +131,7 @@ main h2 {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--text-light);
+    background-color: var(--text-light);
     width: 26px;
     height: 18px;
     background: transparent;
